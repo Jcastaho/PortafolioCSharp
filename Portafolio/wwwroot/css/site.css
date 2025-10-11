@@ -1,0 +1,65 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+/* --- ESTILOS PERSONALIZADOS PARA LA BARRA DE NAVEGACIÓN --- */
+
+/* 1. Estilo general de la barra de navegación */
+.navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: none; /* Quitamos el borde inferior por defecto */
+    box-shadow: none; /* Quitamos la sombra por defecto */
+}
+
+/* 2. Estilo de los enlaces de navegación */
+.navbar-nav .nav-link {
+    color: #c5c6c7; /* Color de texto gris claro para los enlaces */
+    font-size: 1.1rem; /* Hacemos la letra un poco más grande */
+    font-weight: 500;
+    margin-left: 15px; /* Espacio entre cada palabra */
+    margin-right: 15px;
+    transition: color 0.3s ease-in-out; /* Transición suave para el cambio de color */
+}
+
+    /* 3. Efecto hover: lo que pasa cuando pasas el mouse por encima */
+.navbar-nav .nav-link:hover {
+    color: #66fcf1; /* Color turquesa brillante al pasar el mouse */
+}
+
+    /* 4. Estilo para el enlace de la página activa */
+.navbar-nav .nav-link.active {
+    color: #45a29e; /* Color azul/verde para el enlace activo */
+}
+.nav-link.active {
+    font-weight: 600;
+    border-bottom: 2px solid #0d6efd;
+}

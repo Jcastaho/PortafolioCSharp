@@ -1,0 +1,168 @@
+﻿.imagen-perfil {
+    width: 400px; /* Tamaño del contenedor */
+    height: 400px;
+    border-radius: 50%; /* Hace el contenedor redondo */
+    overflow: hidden; /* Oculta lo que sobresalga */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto; /* centra horizontalmente el div */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* opcional, da profundidad */
+}
+
+.imagen-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Corta la imagen sin deformarla */
+    object-position: center; /* Centra la imagen */
+}
+
+.seccion-bienvenida {
+    margin: 5rem 0 10rem 0;
+    color: white;
+}
+
+.seccion-bienvenida h1 {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 1.25rem;
+
+}
+
+#image-dotnet {
+    width: 500px;
+
+}
+
+.cabecera {
+    font-weight: bold
+}
+
+/* =========================================== */
+/* ESTILOS REFINADOS PARA HABILIDADES     */
+/* =========================================== */
+
+/* --- Contenedor y Tarjetas --- */
+.habilidad-card {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff; /* Aseguramos fondo blanco */
+}
+
+.card-content {
+    /* AUMENTAMOS EL PADDING para más "aire" */
+    padding: 30px 35px;
+    flex-grow: 1;
+}
+
+/* --- Íconos Principales --- */
+.card-icon {
+    font-size: 2.8rem; /* Un poco más grande */
+    color: #0d6efd;
+    margin-bottom: 15px;
+    display: block;
+    text-align: center;
+}
+
+/* --- Títulos Principales de la Tarjeta (Back-End / Front-End) --- */
+.habilidad-card h3 {
+    text-align: center;
+    margin-bottom: 25px; /* Más espacio abajo */
+    font-weight: 700;
+    font-size: 1.8em; /* Hacemos el título principal más imponente */
+    color: #343a40;
+}
+
+/* --- Párrafo de descripción general --- */
+.descripcion-general {
+    text-align: center;
+    font-style: italic;
+    color: #6c757d;
+    margin-bottom: 30px; /* Más espacio */
+    line-height: 1.6;
+}
+
+/* --- Títulos de Categoría (Ej: "Bases de Datos") --- */
+.habilidad-card h4 {
+    font-size: 1.1em;
+    font-weight: 700; /* Más grueso */
+    color: #0d6efd;
+    margin-top: 25px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f2f5;
+    text-transform: uppercase; /* MAYÚSCULAS para un look más pro */
+    letter-spacing: 0.5px; /* Espacio entre letras */
+}
+
+    .habilidad-card h4:first-of-type {
+        margin-top: 0;
+    }
+
+/* --- Sub-Títulos (Ej: "Desarrollo Web") --- */
+.habilidad-card h5 {
+    font-size: 1em;
+    font-weight: 400; /* MÁS LIGERO para no competir con los ítems */
+    margin-top: 25px;
+    font-weight:bold;
+    margin-bottom: 15px;
+    font-style: italic; /* Un toque diferente */
+}
+
+/* --- Estilos para TODAS las listas --- */
+.habilidad-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+/* --- Estilos para los elementos de lista --- */
+.habilidad-card li {
+    margin-bottom: 18px; /* MÁS ESPACIO entre ítems */
+    padding-left: 22px;
+    position: relative;
+}
+
+.habilidad-card li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    top: -3px;
+    color: #0d6efd;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+/* --- Estilos para listas SIMPLES (como la de bases de datos) --- */
+.habilidad-card ul.lista-simple li {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 5px 12px;
+    background-color: #f8f9fa;
+    border-radius: 20px; /* PÍLDORAS, más moderno */
+    border: 1px solid #dee2e6;
+    font-size: 0.85em; /* Un poco más pequeño */
+    font-weight: 500;
+}
+
+    .habilidad-card ul.lista-simple li::before {
+        content: '';
+    }
+
+/* --- Estilos para el texto DENTRO de los elementos --- */
+.habilidad-card li strong {
+    font-weight: 600; /* El nombre de la tecnología sí va en negrita */
+    color: #212529;
+    font-size: 1em;
+    margin-bottom: 4px; /* Pequeño espacio antes de la descripción */
+    display: inline-block;
+}
+
+.habilidad-card li .descripcion {
+    font-size: 0.9em;
+    color: #6c757d;
+    display: block;
+    line-height: 1.5; /* Mejora legibilidad de la descripción */
+}
