@@ -375,7 +375,6 @@ body.dark-mode .proyectos-container .btn-primary {
 .contacto-container {
     width: 100%;
     max-width: 500px;
-    background-color: #1e1e1e; /* tono oscuro elegante */
     padding: 20px 40px 40px 40px;
     border-radius: 15px;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
@@ -393,17 +392,14 @@ body.dark-mode .proyectos-container .btn-primary {
 /* Etiquetas */
 .contacto-container .form-label {
     font-weight: 600;
-    color: #d1d1d1;
-
+    color: #000000;
 }
 /* Campos */
 .contacto-container .form-control {
-    background-color: #2e2e2e;
     border: 1px solid #444;
     color: #f1f1f1;
     border-radius: 10px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 .contacto-container .form-control:focus {
