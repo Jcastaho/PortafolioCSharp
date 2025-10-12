@@ -144,12 +144,28 @@
 /* =========================================== */
 
 /* --- Contenedor y Tarjetas --- */
+.habilidades-container {
+    /* Controlamos el espaciado vertical principal aquí, no en las tarjetas.
+      'vh' es una unidad relativa a la altura de la pantalla, es más flexible.
+    */
+    padding-top: 4vh;
+    padding-bottom: 8vh;
+}
 .habilidad-card {
     text-align: left;
     display: flex;
-    flex-direction: column;
-    background-color: #fff; /* Aseguramos fondo blanco */
-    margin: -105px 0 140px 0;
+    background-color: #fff;
+    margin: 0;
+    margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+    .habilidad-card {
+        /* En escritorio, las tarjetas están lado a lado, 
+          así que quitamos el margen inferior que pusimos para móvil.
+        */
+        margin-bottom: 0;
+        margin-top: 0;
+    }
 }
 
 .card-content {
@@ -165,6 +181,9 @@
     margin-bottom: 15px;
     display: block;
     text-align: center;
+}
+.habilidades-container .row > .habilidad-card:last-child {
+    margin-bottom: 0;
 }
 
 /* --- Títulos Principales de la Tarjeta (Back-End / Front-End) --- */
@@ -198,9 +217,9 @@
     letter-spacing: 0.5px; /* Espacio entre letras */
 }
 
-    .habilidad-card h4:first-of-type {
-        margin-top: 0;
-    }
+.habilidad-card h4:first-of-type {
+    margin-top: 0;
+}
 
 /* --- Sub-Títulos (Ej: "Desarrollo Web") --- */
 .habilidad-card h5 {
@@ -227,15 +246,16 @@
     position: relative;
 }
 
-    .habilidad-card li::before {
-        content: '›';
-        position: absolute;
-        left: 0;
-        top: -3px;
-        color: #0d6efd;
-        font-size: 1.6em;
-        font-weight: bold;
-    }
+.habilidad-card li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    top: -3px;
+    color: #0d6efd;
+    font-size: 1.6em;
+    font-weight: bold;
+
+}
 
 /* --- Estilos para listas SIMPLES (como la de bases de datos) --- */
 .habilidad-card ul.lista-simple li {
