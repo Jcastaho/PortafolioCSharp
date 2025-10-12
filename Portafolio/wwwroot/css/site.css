@@ -18,7 +18,8 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    background-color: #f8f9fa;
+    color: #212529;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -38,6 +39,7 @@ body {
     padding-bottom: 1rem;
     border-bottom: none; /* Quitamos el borde inferior por defecto */
     box-shadow: none; /* Quitamos la sombra por defecto */
+    background-color: #ffffff !important;
 }
 
 /* 2. Estilo de los enlaces de navegación */
@@ -62,4 +64,32 @@ body {
 .nav-link.active {
     font-weight: 600;
     border-bottom: 2px solid #0d6efd;
+}
+
+
+/* --- Tema oscuro --- */
+.footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.navbar.dark-mode {
+    background-color: #1e1e1e !important;
+    border-bottom: 1px solid #333;
+}
+.footer.dark-mode {
+    background-color: #1e1e1e;
+    color: #aaa !important;
+}
+
+.nav-link.dark-mode {
+    color: #e0e0e0 !important;
+}
+
+.nav-link.dark-mode.active {
+    color: #4dabf7 !important;
 }

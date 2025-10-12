@@ -1,41 +1,142 @@
-﻿.imagen-perfil {
-    width: 400px; /* Tamaño del contenedor */
-    height: 400px;
-    border-radius: 50%; /* Hace el contenedor redondo */
-    overflow: hidden; /* Oculta lo que sobresalga */
+﻿/* =========================================== */
+/* SECCIÓN HERO (PRESENTACIÓN PERSONAL) */
+/* =========================================== */
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes pulseGlow {
+    from {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    to {
+        transform: scale(1.2);
+        opacity: 0.3;
+    }
+}
+
+/* NOMBRE PRINCIPAL */
+.nombre {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+    letter-spacing: 1px;
+    animation: fadeDown 1s ease-out;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SUBTÍTULO */
+.titulo { 
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+    animation: fadeDown 1.2s ease-out;
+}
+
+/* IMAGEN DE PERFIL */
+.imagen-perfil {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px auto; /* centra horizontalmente el div */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* opcional, da profundidad */
+    margin: 25px auto;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 123, 255, 0.4);
+    border: 3px solid rgba(0, 123, 255, 0.7);
+    animation: float 5s ease-in-out infinite;
 }
 
 .imagen-perfil img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Corta la imagen sin deformarla */
-    object-position: center; /* Centra la imagen */
+    object-fit: cover;
 }
 
-.seccion-bienvenida {
-    margin: 5rem 0 10rem 0;
-    color: white;
+/* Efecto de flotación */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
-.seccion-bienvenida h1 {
-    margin-bottom: 1rem;
-    line-height: 1.5;
-    font-size: 1.25rem;
-
+/* LOGO DOTNET */
+.dotnet-logo {
+    margin-top: 80px;
+    margin-bottom: 5px;
+    animation: fadeUp 1.5s ease-out;
 }
 
 #image-dotnet {
-    width: 500px;
+    width: 320px;
+    filter: drop-shadow(0 0 10px rgba(0,123,255,0.5));
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+#image-dotnet:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 20px rgba(0,123,255,0.8));
+}
+
+/* SECCIÓN DE BIENVENIDA */
+.seccion-bienvenida {
+    background: rgba(13, 110, 253, 0.3);
+    padding: 40px;
+    animation: fadeUp 1.8s ease-out;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.seccion-bienvenida h1 {
+    color: #3f96e1;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
 
 }
 
-.cabecera {
-    font-weight: bold
+.seccion-bienvenida p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Animaciones */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* =========================================== */
@@ -48,6 +149,7 @@
     display: flex;
     flex-direction: column;
     background-color: #fff; /* Aseguramos fondo blanco */
+    margin: -105px 0 140px 0;
 }
 
 .card-content {
@@ -105,9 +207,10 @@
     font-size: 1em;
     font-weight: 400; /* MÁS LIGERO para no competir con los ítems */
     margin-top: 25px;
-    font-weight:bold;
+    font-weight: bold;
     margin-bottom: 15px;
     font-style: italic; /* Un toque diferente */
+    color: black;
 }
 
 /* --- Estilos para TODAS las listas --- */
@@ -124,15 +227,15 @@
     position: relative;
 }
 
-.habilidad-card li::before {
-    content: '›';
-    position: absolute;
-    left: 0;
-    top: -3px;
-    color: #0d6efd;
-    font-size: 1.6em;
-    font-weight: bold;
-}
+    .habilidad-card li::before {
+        content: '›';
+        position: absolute;
+        left: 0;
+        top: -3px;
+        color: #0d6efd;
+        font-size: 1.6em;
+        font-weight: bold;
+    }
 
 /* --- Estilos para listas SIMPLES (como la de bases de datos) --- */
 .habilidad-card ul.lista-simple li {
@@ -145,6 +248,7 @@
     border: 1px solid #dee2e6;
     font-size: 0.85em; /* Un poco más pequeño */
     font-weight: 500;
+    color: black;
 }
 
     .habilidad-card ul.lista-simple li::before {
@@ -165,4 +269,211 @@
     color: #6c757d;
     display: block;
     line-height: 1.5; /* Mejora legibilidad de la descripción */
+}
+
+/* =========================================== */
+/* ESTILOS para la seccion de proyectos     */
+/* =========================================== */
+
+.proyectos-container {
+    margin-bottom: 100px; /* espacio inferior entre la sección y el footer o siguiente bloque */
+}
+
+.proyectos-container .card {
+    border: none; /* quita el borde predeterminado de Bootstrap */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagen superior */
+.proyectos-container .card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Cuerpo de la tarjeta */
+.proyectos-container .card-body {
+    text-align: center;
+    padding: 20px;
+
+}
+
+/* Título del proyecto */
+.proyectos-container .card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #0d6efd;
+    margin-bottom: 10px;
+
+}
+
+/* Descripción */
+.proyectos-container .card-text {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+/* Footer con botón */
+.proyectos-container .card-footer {
+    background-color: transparent;
+    border-top: none;
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+/* Botón */
+.proyectos-container .btn-primary {
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-weight: 500;
+}
+
+/* Efecto hover */
+.proyectos-container .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+
+}
+/*modo oscuro*/
+body.dark-mode .proyectos-container .card {
+    background-color: #2e2e2e;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+/*modo oscuro*/
+body.dark-mode .proyectos-container .card-title {
+    color: #4dabf7;
+}
+/*modo oscuro*/
+body.dark-mode .proyectos-container .card-text {
+    color: #d1d1d1;
+}
+/*modo oscuro*/
+body.dark-mode .proyectos-container .btn-primary {
+    background-color: #4dabf7;
+    border-color: #4dabf7;
+}
+
+
+/* =========================================== */
+/* SECCIÓN DE CONTACTO */
+/* =========================================== */
+
+/* Contenedor que ocupa toda la pantalla */
+.contacto-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh; /* casi toda la pantalla, dejando espacio para el footer */
+    background-color: transparent;
+}
+
+/* Tarjeta del formulario */
+.contacto-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #1e1e1e; /* tono oscuro elegante */
+    padding: 20px 40px 40px 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Título */
+.contacto-container h1 {
+    text-align: center;
+    color: #4dabf7;
+    font-weight: 700;
+    margin-bottom: 30px;
+
+}
+
+/* Etiquetas */
+.contacto-container .form-label {
+    font-weight: 600;
+    color: #d1d1d1;
+
+}
+/* Campos */
+.contacto-container .form-control {
+    background-color: #2e2e2e;
+    border: 1px solid #444;
+    color: #f1f1f1;
+    border-radius: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.contacto-container .form-control:focus {
+    border-color: #4dabf7;
+    box-shadow: 0 0 8px rgba(77, 171, 247, 0.3);
+
+}
+
+/* Botón */
+.contacto-container .btn-primary {
+    margin-top: 30px;
+    display: block;
+    width: 100%;
+    border-radius: 25px;
+    padding: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background-color: #0d6efd;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+.contacto-container .btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+
+}
+
+/* Animación de aparición suave */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contacto-container {
+    animation: fadeUp 0.8s ease-out;
+}
+
+body.dark-mode .contacto-container {
+    background-color: #2e2e2e;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .contacto-container h1 {
+    color: #4dabf7;
+
+}
+
+body.dark-mode .contacto-container .form-label {
+    color: #e1e1e1;
+
+}
+
+body.dark-mode .contacto-container .form-control {
+    background-color: #3a3a3a;
+    color: #f1f1f1;
+    border: 1px solid #555;
+
+}
+
+body.dark-mode .contacto-container .form-control:focus {
+    border-color: #4dabf7;
+    box-shadow: 0 0 6px rgba(77, 171, 247, 0.4);
+
 }
